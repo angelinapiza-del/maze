@@ -1,4 +1,4 @@
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorDark1, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorDark2, function (sprite, location) {
     game.over(true)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
@@ -43,7 +43,7 @@ mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Enemy)
 controller.moveSprite(mySprite)
-tiles.setTilemap(tilemap`level1`)
+tiles.setTilemap(tilemap`level_1`)
 tiles.placeOnRandomTile(mySprite, assets.tile`transparency16`)
 scene.cameraFollowSprite(mySprite)
 info.startCountdown(10)
