@@ -70,7 +70,7 @@ mySprite = sprites.create(img`
     ..............................
     `, SpriteKind.Player)
 controller.moveSprite(mySprite)
-tiles.setCurrentTilemap(tilemap`level0`)
+tiles.setCurrentTilemap(tilemap`level2`)
 tiles.placeOnRandomTile(mySprite, assets.tile`transparency16`)
 scene.cameraFollowSprite(mySprite)
 info.startCountdown(10)
