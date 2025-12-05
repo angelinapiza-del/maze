@@ -1,3 +1,28 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    animation.runImageAnimation(
+    mySprite,
+    [img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `],
+    500,
+    false
+    )
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`transparency16`, function (sprite, location) {
     game.over(true)
 })
@@ -6,7 +31,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
     music.baDing.play()
     info.changeLifeBy(-1)
 })
-let mySprite = sprites.create(img`
+let mySprite: Sprite = null
+mySprite = sprites.create(img`
     .......26.........6...........
     ..................66..........
     ..........6........6..........
